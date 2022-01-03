@@ -72,7 +72,7 @@ function age_cal(name, year){
     let date = new Date();
     let age1 = date.getFullYear() - year;
     let agechk1 = ageMeter1(age1);
-    return `<p class="alert alert-${agechk1.status}">Hi ${name} you are ${age1} years old & your Gender status: ${fgroup.value} now you ${agechk1.name1}</p>`
+    return `<p class="alert alert-${agechk1.status}">Hi ${name} you are ${age1} years old & your Gender status: ${fgroup.value} now you are ${agechk1.name1}</p>`
 
 }
 

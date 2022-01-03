@@ -79,14 +79,4 @@ if(name2.value == '' || year1.value == '' || sele.value == sele.children[0].valu
 })
 
 
-
-// {/* <p></p> */}
-
-// let fer = 2005.;
-// let agepattern = /^[0-9][^.@#%$&]{4}$/;
-// console.log(agepattern.test(fer));
-
-// name.style.border = "#008640 1px solid";
-// year1.style.border = "#008640 1px solid";
-
-// `<p class="alert alert-success text-center">data done</p>`
+// =================end of data===========================

@@ -67,13 +67,11 @@ fgroup.addEventListener('change' , () =>{
 
 idform.addEventListener('submit' , (evn) =>{
     evn.preventDefault();
-    if(idname == '' || idage == '' || fgroup.value == fgroup.children[0].value){
+    if(idname.value == '' || idage.value == '' || fgroup.value == fgroup.children[0].value){
         bp.innerHTML = '<p class = "alert alert-danger">*plese fill up form*</p>';
         idname.style.border ="red 1px solid";
         idage.style.border ="red 1px solid";
         fgroup.style.border ="red 1px solid";
-    }else if(idname == '' || idage == '' || fgroup.value == fgroup.children[1].value || fgroup.value == fgroup.children[2].value){
-        bp.innerHTML = '<p class = "alert alert-danger">*plese fill up form*</p>';
     }else{
         bp.innerHTML = age_cal(idname.value, idage.value);
         idname.value= '';
@@ -81,7 +79,9 @@ idform.addEventListener('submit' , (evn) =>{
         idname.style.border ="#27ae60 1px solid";
         idage.style.border ="#27ae60 1px solid";
         fgroup.style.border ="#27ae60 1px solid";
-        bp.innerHTML= '';
     }
 });
 
+
+
+// =================end of data===========================
