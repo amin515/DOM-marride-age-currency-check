@@ -11,8 +11,6 @@ function marrideAgeChecker(name, year, gender) {
 
     let date = new Date();
     age = date.getFullYear(age) - year;
-    // let agm = ageMeter(age);
-
     return `Hi ${name} your age ${age} & you are ${amin(age, gender)}`
 
 }
@@ -22,21 +20,21 @@ function amin(age, gender) {
 
     if (age < 18) {
         if (gender == 'male'){
-            return `Not elidgble for marride 1# wait for more ${22 - age} ${22-age > 1 ? "years": "year"}`
+            return `<p class = "alert alert-danger">Not elidgble for marride 1# wait for more ${22 - age} ${22-age > 1 ? "years": "year"}</p>`
         } else if (gender == 'female') {
-            return `Not elidgble for marride 2# wait for more ${18 - age} ${18-age > 1 ? "years": "year"}`
+            return `<p class = "alert alert-danger">Not elidgble for marride 2# wait for more ${18 - age} ${18-age > 1 ? "years": "year"}</p>`
         }
     }else if(age >= 18){
         if (gender == 'male') {
-            return `Not elidgble for marride 1# wait for more ${22 - age} ${22-age > 1 ? "years": "year"}`
+            return `<p class = "alert alert-danger">Not elidgble for marride 1# wait for more ${22 - age} ${22-age > 1 ? "years": "year"}</p>`
         } else if (gender == 'female') {
-            return `elidgble for marride 2#}`
+            return `<p class = "alert alert-success">Elidgble for marride 2#</p>`
         }
     }else if(age >= 22){
         if (gender == 'male') {
-            return `elidgble for marride 1#`
+            return `<p class = "alert alert-success">Elidgble for marride 1#</p>`
         } else if (gender == 'female') {
-            return `elidgble for marride 2#}`
+            return `<p class = "alert alert-success">Elidgble for marride 2#</p>`
         }
     }
 
