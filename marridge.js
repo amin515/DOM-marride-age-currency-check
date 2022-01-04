@@ -13,6 +13,7 @@ const btn = document.querySelector('#btn');
 const amin1 = document.querySelector('#amin1');
 const amin2 = document.querySelector('#amin2');
 const h4 = document.querySelector('#h4');
+const pn = document.querySelector('#pn');
 
 
 
@@ -74,9 +75,8 @@ if(name2.value == '' || year1.value == '' || sele.value == sele.children[0].valu
     h4.innerHTML = `<p class="alert alert-success text-center text-dark">Nice Try</p>`
     name2.value = '';
     year1.value = '';
-    
 }
-})
+});
 
 
 // =================end of data===========================

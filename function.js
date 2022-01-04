@@ -8,25 +8,23 @@
 
 function marrideAgeChecker(name, year, gender) {
 
-
     let date = new Date();
     age = date.getFullYear(age) - year;
-    return `Hi ${name} your age ${age} & you are ${amin(age, gender)}`
+    return `<p class= "alert alert-success">Hi ${name} your age ${age} & you are ${amin(age, gender)}</p>`
 
 }
 
 function amin(age, gender) {
 
-
     if (age < 18) {
         if (gender == 'male'){
-            return `<p class = "alert alert-danger">Not elidgble for marride 1# wait for more ${22 - age} ${22-age > 1 ? "years": "year"}</p>`
+            return `<p class = "alert alert-danger">Not elidgble for marride 1 wait for more ${22 - age} ${22-age > 1 ? "years": "year"}</p>`
         } else if (gender == 'female') {
             return `<p class = "alert alert-danger">Not elidgble for marride 2# wait for more ${18 - age} ${18-age > 1 ? "years": "year"}</p>`
         }
-    }else if(age >= 18){
+    }else if(age >= 18 && age < 22){
         if (gender == 'male') {
-            return `<p class = "alert alert-danger">Not elidgble for marride 1# wait for more ${22 - age} ${22-age > 1 ? "years": "year"}</p>`
+            return `<p class = "alert alert-danger">Not elidgble for marride 1# wait for more  ${22-age}${22-age > 1 ? "years": "year"}</p>`
         } else if (gender == 'female') {
             return `<p class = "alert alert-success">Elidgble for marride 2#</p>`
         }
@@ -37,11 +35,7 @@ function amin(age, gender) {
             return `<p class = "alert alert-success">Elidgble for marride 2#</p>`
         }
     }
-
-
 }
-
-
 
 // ===========age chacker ========
 
