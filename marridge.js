@@ -67,7 +67,7 @@ if(name2.value == '' || year1.value == '' || sele.value == sele.children[0].valu
     sele.style.border = "red 1px solid";
     h4.innerHTML = `<p class="alert alert-success text-center text-dark">Try Again</p>`
 }else{
-    plain.innerHTML = marrideAgeChecker(name2.value, year1.value);
+    plain.innerHTML = marrideAgeChecker(name2.value, year1.value, sele.value);
     name2.style.border = "#008640 1px solid";
     year1.style.border = "#008640 1px solid";
     sele.style.border = "#008640 1px solid";

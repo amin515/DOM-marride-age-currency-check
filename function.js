@@ -1,4 +1,3 @@
-
 /**
  * marrigae agechecker---
  * @param {*} name 
@@ -7,52 +6,41 @@
  */
 
 
-function marrideAgeChecker(name, year){
+function marrideAgeChecker(name, year, gender) {
 
-let date = new Date();
-age = date.getFullYear() - year;
 
-let agm = ageMeter(age);
-return `<p class= "alert alert-${agm.status} mt-2"> Hi ${name} your Gender status: ${sele.value} and you are ${age} years old & you are ${agm.name1} and you are </p>`
-// return `<p class="alert alert-${agm.status}">Hi ${name} you are ${age} years old  & you have ${agm.name1}</p>`;
+    let date = new Date();
+    age = date.getFullYear(age) - year;
+    // let agm = ageMeter(age);
+
+    return `Hi ${name} your age ${age} & you are ${amin(age, gender)}`
+
 }
 
+function amin(age, gender) {
 
 
-/**
- * // marrige agechecker function 2 ---
- * @param {*} age 
- * @returns 
- */
+    if (age < 18) {
+        if (gender == 'male'){
+            return `Not elidgble for marride 1# wait for more ${22 - age} ${22-age > 1 ? "years": "year"}`
+        } else if (gender == 'female') {
+            return `Not elidgble for marride 2# wait for more ${18 - age} ${18-age > 1 ? "years": "year"}`
+        }
+    }else if(age >= 18){
+        if (gender == 'male') {
+            return `Not elidgble for marride 1# wait for more ${22 - age} ${22-age > 1 ? "years": "year"}`
+        } else if (gender == 'female') {
+            return `elidgble for marride 2#}`
+        }
+    }else if(age >= 22){
+        if (gender == 'male') {
+            return `elidgble for marride 1#`
+        } else if (gender == 'female') {
+            return `elidgble for marride 2#}`
+        }
+    }
 
 
-function ageMeter(age){
-if(age >=0 && age < 10){
-    return{
-        name1 : 'You Are still Child',
-        status : 'primary',
-    };
-}else if(age >= 10 && age < 18){
-    return{
-        name1 : 'Not eligible for marride',
-        status : 'info',
-    };
-}else if(age >= 18 && age < 25){
-    return{
-        name1 : 'Its time to marride',
-        status : 'success',
-    };
-}else if(age >= 25 && age < 50){
-    return{
-        name1 : 'Time almost gone',
-        status : 'warning',
-    };
-}else{
-    return{
-        name1 : 'Sorry Dear, out of age',
-        status : 'danger',
-    };
-};
 }
 
 
@@ -67,8 +55,7 @@ if(age >=0 && age < 10){
  */
 
 
-function age_cal(name, year){
-
+function age_cal(name, year) {
     let date = new Date();
     let age1 = date.getFullYear() - year;
     let agechk1 = ageMeter1(age1);
@@ -83,34 +70,34 @@ function age_cal(name, year){
  */
 
 
-function ageMeter1(age1){
-    if(age1 >=0 && age1 < 10){
-        return{
-            name1 : 'You Are still Child',
-            status : 'primary',
+function ageMeter1(age1) {
+    if (age1 >= 0 && age1 < 10) {
+        return {
+            name1: 'You Are still Child',
+            status: 'primary',
         };
-    }else if(age1 >= 10 && age1 < 18){
-        return{
-            name1 : 'Teenager',
-            status : 'info',
+    } else if (age1 >= 10 && age1 < 18) {
+        return {
+            name1: 'Teenager',
+            status: 'info',
         };
-    }else if(age1 >= 18 && age1 < 25){
-        return{
-            name1 : 'Young',
-            status : 'success',
+    } else if (age1 >= 18 && age1 < 25) {
+        return {
+            name1: 'Young',
+            status: 'success',
         };
-    }else if(age1 >= 25 && age1 < 50){
-        return{
-            name1 : 'Going to old',
-            status : 'warning',
+    } else if (age1 >= 25 && age1 < 50) {
+        return {
+            name1: 'Going to old',
+            status: 'warning',
         };
-    }else{
-        return{
-            name1 : 'Sorry Dear, out of age',
-            status : 'danger',
+    } else {
+        return {
+            name1: 'Sorry Dear, out of age',
+            status: 'danger',
         };
     };
-    }
+}
 
 
-    //==========end of data=============
+//==========end of data=============
